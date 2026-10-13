@@ -1,15 +1,17 @@
 #pragma once
 /**
- * cv_custom_algorithms.h — From-scratch CV algorithms for CV_05
+ * cv_custom_algorithms.h — Core Numerical Algorithms for EigenFace-Engine
  *
- * Face Recognition (PCA / Eigenfaces):
- *   - Histogram Equalization
- *   - Jacobi Eigendecomposition
- *   - PCA Training & Recognition
- *   - Batch Recognition (for ROC evaluation)
+ * Implements from scratch:
+ *   - Grayscale conversion (Luminosity algorithm)
+ *   - Bilinear image interpolation & scaling
+ *   - Histogram Equalization for lighting normalization
+ *   - Cyclic Jacobi Eigendecomposition solver for symmetric real matrices
+ *   - PCA / Eigenface training via A^T*A covariance dimensionality reduction
+ *   - Projection into eigenspace and L2 nearest-neighbor classification
+ *   - Top eigenface & mean face image synthesis
  *
- * OpenCV is used ONLY for cv::Mat storage and basic types.
- * All algorithmic logic is implemented from scratch.
+ * OpenCV is strictly restricted to cv::Mat container storage and basic types.
  */
 
 #include <opencv2/core.hpp>

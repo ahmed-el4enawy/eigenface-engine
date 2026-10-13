@@ -1,4 +1,4 @@
-"""Views for the detector app — CV_05: Face Detection & Recognition."""
+"""Views for the detector app — EigenFace-Engine."""
 
 import os
 import sys

@@ -1,4 +1,4 @@
-"""Django settings for CV_05 — Face Detection & Recognition."""
+"""Django settings for EigenFace-Engine — High-Performance Facial Biometrics Suite."""
 
 from pathlib import Path
 

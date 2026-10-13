@@ -1,8 +1,12 @@
 """
-face_utils.py — Python-side utilities for face recognition evaluation.
+face_utils.py — Evaluation, Metrics & Pipeline Orchestration for EigenFace-Engine.
 
-Handles dataset loading, train/test splitting, ROC curve generation,
-and performance metrics. All core algorithms run in C++ via cv_core.
+Features:
+  - Dataset ingestion (ORL/AT&T and generic directory hierarchies)
+  - Stratified train/test dataset partitioning
+  - Continuous ROC curve parameter sweeping (FPR vs. TPR) & AUC integration
+  - Equal Error Rate (EER) computation & confusion matrix generation
+  - Zero-copy ctypes memory-safe interoperability with native C++ engine
 """
 
 import os

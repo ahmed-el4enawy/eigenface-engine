@@ -40,15 +40,31 @@ body {
 
 /* ── Header ── */
 .header {
-    background: linear-gradient(180deg, rgba(0,212,255,0.08) 0%, transparent 100%);
+    background: linear-gradient(180deg, rgba(0, 212, 255, 0.08) 0%, rgba(10, 14, 26, 0.95) 100%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
     border-bottom: 1px solid var(--border);
-    padding: 1.5rem 2rem;
-    text-align: center;
+    padding: 1.5rem 2.5rem;
+}
+.header-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.25rem;
+}
+.header-brand {
+    text-align: left;
 }
 .logo {
-    font-size: 2.2rem;
-    font-weight: 700;
-    letter-spacing: -0.02em;
+    font-size: 2.1rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 }
 .logo .accent {
     background: var(--gradient-primary);
@@ -56,11 +72,61 @@ body {
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
+.badge-engine {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    padding: 0.2rem 0.55rem;
+    border-radius: 4px;
+    background: rgba(0, 212, 255, 0.15);
+    border: 1px solid rgba(0, 212, 255, 0.4);
+    color: var(--accent-cyan);
+    vertical-align: middle;
+    text-transform: uppercase;
+}
 .subtitle {
     color: var(--text-secondary);
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     margin-top: 0.25rem;
-    font-weight: 300;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+}
+.header-status {
+    display: flex;
+    gap: 0.75rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.status-pill {
+    font-size: 0.78rem;
+    font-weight: 500;
+    padding: 0.35rem 0.75rem;
+    border-radius: 9999px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: var(--transition);
+}
+.status-pill:hover {
+    border-color: var(--accent-cyan);
+    color: var(--text-primary);
+    box-shadow: 0 0 12px rgba(0, 212, 255, 0.15);
+}
+.pulse-dot {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent-green);
+    box-shadow: 0 0 8px var(--accent-green);
+    display: inline-block;
+    animation: pulseGlow 2s infinite ease-in-out;
+}
+@keyframes pulseGlow {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.4; transform: scale(0.85); }
 }
 
 /* ── Tab Bar ── */
@@ -398,13 +464,17 @@ body {
 /* ── Footer ── */
 .footer {
     text-align: center;
-    padding: 2rem;
-    color: var(--text-muted);
-    font-size: 0.75rem;
+    padding: 2.5rem 1.5rem;
+    color: var(--text-secondary);
+    font-size: 0.82rem;
     border-top: 1px solid var(--border);
-    margin-top: 3rem;
+    margin-top: 4rem;
+    background: rgba(10, 14, 26, 0.6);
 }
-.footer p { margin: 0.2rem 0; }
+.footer p { margin: 0.3rem 0; }
+.footer strong { color: var(--text-primary); font-weight: 600; }
+.footer .credits { color: var(--accent-cyan); font-size: 0.8rem; opacity: 0.9; }
+.footer .affiliation { color: var(--text-muted); font-size: 0.75rem; margin-top: 0.5rem; }
 
 /* ── Scrollbar ── */
 ::-webkit-scrollbar { width: 6px; }

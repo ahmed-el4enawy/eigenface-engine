@@ -1,11 +1,14 @@
 /**
- * cv_core – C++ computer vision operations for CV_05.
+ * EigenFace-Engine — High-Performance C++17 Facial Biometrics & Recognition Core
  *
- * Assignment 5: Face Detection & Recognition (PCA / Eigenfaces)
+ * Core Components:
+ *   - Custom Jacobi Eigendecomposition solver for symmetric covariance matrices
+ *   - Sirovich & Kirby / Turk & Pentland Eigenface PCA dimensionality reduction
+ *   - Nearest-Neighbor eigenspace projection and classification
+ *   - Dual Interop: pybind11 native module + zero-copy ctypes memory pointer C ABI
  *
- * All algorithmic functions are implemented from scratch.
- * OpenCV is used ONLY for cv::Mat, cv::imread, cv::imwrite (image I/O),
- * and cv::CascadeClassifier (face detection — permitted per instructions).
+ * All mathematical algorithms and matrix decompositions are implemented from scratch.
+ * OpenCV is utilized strictly for basic cv::Mat storage, image I/O, and cascade detection.
  */
 
 #include <pybind11/pybind11.h>
@@ -223,7 +226,7 @@ py::dict batch_recognize_api(const std::vector<std::string>& test_paths,
 
 PYBIND11_MODULE(cv_core, m)
 {
-    m.doc() = "C++ custom CV core – CV_05: Face Detection & Recognition (PCA/Eigenfaces)";
+    m.doc() = "EigenFace-Engine: High-Performance C++17 Facial Biometrics & PCA Core";
 
     m.def("detect_faces", &detect_faces_api, "Face detection (color + grayscale)",
           py::arg("input_path"), py::arg("output_path"),

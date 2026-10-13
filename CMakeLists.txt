@@ -1,17 +1,14 @@
 # ═══════════════════════════════════════════════════════════════
-#  CV_05 – Build configuration
+#  EigenFace-Engine – Build Configuration
 #
 #  Prerequisites (set/found automatically via find_package):
-#    • OpenCV 4.x   – set OpenCV_DIR if not in default location
-#    • Python 3.12+  – with pybind11 installed in the venv
-#
-#  Build:
-#    cmake -S . -B build -G "Visual Studio 18 2026" -A x64
-#    cmake --build build --config Release
+#    • OpenCV 4.x    – set OpenCV_DIR if not in default location
+#    • Python 3.12+  – with pybind11 installed in the environment
+#    • C++17 compliant compiler (MSVC, GCC, Clang)
 # ═══════════════════════════════════════════════════════════════
 
 cmake_minimum_required(VERSION 3.15)
-project(CV_Five LANGUAGES CXX)
+project(EigenfaceEngine VERSION 1.0.0 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)

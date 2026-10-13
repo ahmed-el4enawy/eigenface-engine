@@ -1,4 +1,10 @@
 #pragma once
+/**
+ * cv_face_algorithms.h — Facial Detection & Annotation Subsystem
+ *
+ * Implements multi-scale facial bounding box detection and Bresenham-based
+ * primitive box rendering for EigenFace-Engine.
+ */
 #include "cv_custom_algorithms.h"
 #include <opencv2/objdetect.hpp>
 #include <opencv2/imgproc.hpp>

@@ -63,8 +63,11 @@ ext = Pybind11Extension(
 )
 
 setup(
-    name="cv_core",
-    version="0.5.0",
+    name="eigenface_core",
+    version="1.0.0",
+    description="High-performance C++17 Eigenface & PCA facial biometrics core engine",
+    author="Ahmed Salah, Abdullah Khalifa, Mohamed Attallah",
     ext_modules=[ext],
     cmdclass={"build_ext": build_ext},
+    zip_safe=False,
 )

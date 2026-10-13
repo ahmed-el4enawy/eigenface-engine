@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV_05 — Face Detection &amp; Recognition</title>
-    <meta name="description" content="Computer Vision Project 5: Face Detection and Recognition using PCA/Eigenfaces">
+    <title>EigenFace-Engine — High-Performance Facial Biometrics &amp; Recognition</title>
+    <meta name="description" content="High-performance C++17 facial biometrics, PCA eigenspace projection, and ROC evaluation engine with Django web dashboard.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     {% load static %}
@@ -13,8 +13,15 @@
 <body>
     <header class="header">
         <div class="header-content">
-            <h1 class="logo">CV<span class="accent">_05</span></h1>
-            <p class="subtitle">Face Detection &amp; Recognition · Eigenfaces / PCA</p>
+            <div class="header-brand">
+                <h1 class="logo">Eigen<span class="accent">Face</span> <span class="badge-engine">ENGINE</span></h1>
+                <p class="subtitle">High-Performance C++17 Facial Detection &amp; PCA Recognition Suite</p>
+            </div>
+            <div class="header-status">
+                <span class="status-pill"><span class="pulse-dot"></span> C++17 Core Active</span>
+                <span class="status-pill">pybind11 + ctypes</span>
+                <span class="status-pill">Jacobi Eigensolver</span>
+            </div>
         </div>
     </header>
 
@@ -127,8 +134,9 @@
     </main>
 
     <footer class="footer">
-        <p>Cairo University · Faculty of Engineering · Systems &amp; Biomedical Engineering · Computer Vision (Assignment 5)</p>
-        <p>Team 12: Ahmed Salah Geoshy Elshenawy · Abdullah Mohammad Khalifa · Mohamed Elsayed Attallah</p>
+        <p><strong>EigenFace-Engine</strong> · High-Performance Facial Biometrics &amp; Dimensionality Reduction Pipeline</p>
+        <p class="credits">Engineering &amp; Algorithms: Ahmed Salah Geoshy Elshenawy · Abdullah Mohammad Khalifa · Mohamed Elsayed Attallah</p>
+        <p class="affiliation">Cairo University · Faculty of Engineering · Systems &amp; Biomedical Engineering Department</p>
     </footer>
 
     <script src="{% static 'js/app.js' %}"></script>
